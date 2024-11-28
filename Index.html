@@ -1,14 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
- 
+    <title>News</title>
+    <link rel="stylesheet" href="style.css">  
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"  rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Vidaloka&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Vidaloka&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    <header class="header">  
+        <div class="header__menu-search-dropdown-container">
+
+            <div class="header__menu-search-container">
+                
+                <img src="images/menuIcon.svg" alt="menu icon" class="header__menu-image" onclick="showHiddenNavbar()" />
     
-    
+                <div class="header__search-container">
+                    <img src="images/searchIcon.svg" alt="search icon" />
+                </div>
+
+                <h1 class="header__title">News Page</h1>
+
+                <img src="images/accountIcon.svg" alt="account icon" class="header__account-image">
+            </div>
+
+            <ul class="header__dropdown">
+                <li onclick="hideNavbar()">Home</li>
+                <li onclick="hideNavbar()">News</li>
+                <li onclick="hideNavbar()">Sport</li>
+                <li onclick="hideNavbar()">Business</li>
+                <li onclick="hideNavbar()">Innovation</li>
+                <li onclick="hideNavbar()">Culture</li>
+                <li onclick="hideNavbar()">Arts</li>
+                <li onclick="hideNavbar()">Travel</li>
+                <li onclick="hideNavbar()">Earth</li>
+            </ul>
+
+        </div>
+
+    </header>
+
+    <main class="main">
+        <article class="main__article">
+            <img class="main__article-image" src="images/new1.png" alt="article image">
+            <div class="main__article-text-container">
+                <h2 class="main__article-title">The Lebanon ceasefire is a respite, not a solution for the Middle East</h2>
+                <p class="main__article-text">For most of the people of Lebanon, a ceasefire could not come quickly enough. A leading Lebanese analyst at a conference on the Middle East that I’m attending in Rome said she couldn’t sleep as the appointed hour for the ceasefire came closer.
+
+                    “It was like the night before Christmas when you’re a kid. I couldn’t wait for it to happen.”
+                    
+                    You can see why there’s relief. More than 3,500 citizens of Lebanon have been killed in Israeli strikes. Displaced people packed their cars before dawn to try to get back to whatever remains of their homes.
+                    
+                    Well over one million of them have been forced to flee by Israeli military action. Thousands have been wounded and the homes of tens of thousands of others have been destroyed.
+                    
+                    But in Israel, some feel they have lost the chance to do more damage to Hezbollah. Prime Minister Benjamin Netanyahu met the heads of Israel’s northern municipalities, which have been turned into ghost towns with around 60,000 civilians evacuated further south.
+
+                    Israel’s Ynet news website reported that it was an angry meeting that turned into a shouting match, with some of the local officials frustrated that Israel was taking the pressure off their enemies in Lebanon and not offering an immediate plan to get civilians home.
+                    
+                    In a newspaper column, the mayor of Kiryat Shmona, close to the border, said he doubted the ceasefire would be enforced, demanding that Israel creates a buffer zone in south Lebanon. In a poll commissioned by the Israeli station Channel 12 News those questioned were roughly split between supporters and opponents of the ceasefire.
+                    
+                    Half of the participants in the survey believe Hezbollah has not been defeated and 30% think the ceasefire will collapse. Back in late September, at the UN General Assembly in New York, a deal looked as if it was close. Diplomats from the US and UK were convinced that a ceasefire very similar to the one that is now coming into force was about to happen.
+
+                    All sides in the war appeared to have signalled their willingness to accept a ceasefire based on the provisions of Security Council resolution 1701, which was passed to end the 2006 Lebanon war: Hezbollah would pull back from the border to be replaced by UN peacekeepers and the Lebanese Armed Forces. As they moved in, Israeli forces would gradually move out.
+                    
+                    But Prime Minister Netanyahu went to the podium at the UN to deliver a fiery speech that refused to accept any pause in Israel’s offensive.
+                    
+                    Back at his New York hotel Netanyahu’s official photographer captured the moment as he ordered the assassination of Hassan Nasrallah, the leader of Hezbollah, along with most of his high command. Netanyahu’s office released the photos, in another calculated snub for American diplomacy.
+                    
+                    The assassination was a significant escalation and a blow to Hezbollah. In the weeks since, Israel’s military has inflicted immense damage to Hezbollah’s military organisation. It could still fire rockets over the border and its fighters continued to engage Israel’s invasion force. But Hezbollah is no longer the same threat to Israel.</p>
+            </div>
+        </article>
+        <hr>
+        <article class="main__article">
+            <img class="main__article-image" src="images/news4.jpg" alt="article image">
+            <div class="main__article-text-container">
+                <h2 class="main__article-title">First new asthma attack treatment in 50 years</h2>
+                <p class="main__article-text">Researchers say they have found the first new treatment for asthma attacks in 50 years.
+
+                    The injection dampens part of the immune system that can go into overdrive in flare-ups of both asthma and a lung condition called chronic obstructive pulmonary disease (COPD).
+                    
+                    Benralizumab is already used in the most severe cases, but the latest research suggests it could be used routinely for around two million attacks in the UK each year.
+                    
+                    The research team at King's College London said the drug was a "game-changer" that could "revolutionise" care.
+                    
+                    The findings stem from the realisation that not all asthma or COPD attacks are the same. Instead, different parts of the immune system are over-reacting in different patients.
+                    
+                    "Now we can see there are different patterns of inflammation, we can be smarter and get the right treatment, to the right patient, at the right time," said Prof Mona Bafadhel, from King's.
+                    
+                    Benralizumab targets a type of white blood cell - called an eosinophil - that can cause inflammation and damage in the lungs.
+                    
+                    Eosinophils are implicated in about half of asthma attacks and a third of COPD flare-ups.
+                    
+                    If such an attack - involving difficulty breathing, wheezing, coughing and chest tightness - cannot be controlled with regular inhalers then doctors currently prescribe a course of steroids.
+                    
+                    The study, on 158 people, monitored patients for three months after treatment for a flare-up.
+                    
+                    The results in The Lancet Respiratory Medicine found a treatment failure rate of:
+                    
+                    74% when taking steroids
+                    and 45% with the new therapy
+                    People treated with the new therapy were less likely to be admitted to hospital, need another round of treatment or die.
+                    
+                    Prof Bafadhel said this could benefit a huge number of people as two million attacks a year "is not a small number".
+                    
+                    "This is a game-changer, we’ve not had a change in treatment for 50 years - it will revolutionise how we treat people when they’re really unwell," Prof Bafadhel said.
+                    
+                    Volunteers also reported improved symptoms and a better quality of life on the new drug.Alison Spooner, who is 55 and from Oxfordshire, was one of those taking part in the trial. She has had asthma since childhood, but it became worse over the past five years and she's had three major attacks.
+
+                    "They seemed to be getting worse, the severe lack of breath was quite frightening when you're gasping and there's nothing to gasp at," she told me.
+                    
+                    Alison says she felt "drastically different" after having the injection and still uses her inhalers but "only because I've been told to".
+                    
+                    "Unfortunately, no drug gets rid of asthma completely, but this is the nearest thing. It's a bit of a miracle actually," she adds.</p>
+            </div>
+        </article>
+        <hr>
+        <article class="main__article">
+            <img class="main__article-image" src="images/new3.jpg" alt="article image">
+            <div class="main__article-text-container">
+                <h2 class="main__article-title">The rise and fall of Vang Vieng, Laos' notorious party town</h2>
+                <p class="main__article-text">Once notorious as a debauched riverside party town, Vang Vieng had cleaned up its act in recent years, but is now in the headlines for all the wrong reasons once again.
+
+                    "Just make sure you push yourself off the end when you reach the bottom of the slide. We had someone die on those rocks down there last week."
+                    
+                    It was 2010, and for the young me – teenaged, inebriated and on my first ever backpacking trip through Southeast Asia – health and safety were far from the top of the agenda.
+                    
+                    Nevertheless, I heeded the advice offered by the dreadlocked Australian bartender, and, as I reached the end of the tiled slide, gave myself an almighty push into the air above the Nam Song River, throwing out a warning yell to alert the revellers in the water below of my clumsily impending cannonball.
+                    
+                    Vang Vieng, a town of around 25,000 people on the banks of the Nam Song River in central Laos, has for decades been a firm fixture on the so-called "Banana Pancake Trail" – the backpacker path through Southeast Asia named for the go-to breakfast at so many guesthouses and cafes along the route. Once notoriously known as a debauched riverside party town, Vang Vieng had cleaned up its act in recent years, but it is now in the headlines for all the wrong reasons once again, with a number of foreign tourists having died after ingesting drinks laced with methanol.</p>
+            </div>
+        </article>
+    </main>
+    <script type="text/javascript" src="javascript.js"></script>
 </body>
+
 </html>
+
