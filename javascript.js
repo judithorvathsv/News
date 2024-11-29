@@ -1,5 +1,5 @@
 function toggleHiddenNavbar(){
-    const menuList = document.querySelector('.header__nav-dropdown');
+    const menuList = document.querySelector('.header__nav-topic-dropdown');
     menuList.classList.toggle("showned-list");   
 }
 
