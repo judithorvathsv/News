@@ -181,7 +181,7 @@
  .main__time-and-topic-container{
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 8px;
   padding-top: 15px;
   width: fit-content;
    
