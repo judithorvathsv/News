@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,57 +21,74 @@
 
 <body>
     <header class="header">
-        <nav class="header__menu-search-dropdown-container">
+        <nav class="header__nav">
+            <div class="header__nav-upper-row">
 
-            <div class="header__menu-search-container">
 
-                <div class="header__menu-search-div">
+                <div class="header__menu-button-and-search-container">
                     <img src="images/menuIcon.svg" alt="menu icon" class="header__menu-image"
-                        onclick="showHiddenNavbar()" />
+                        onclick="toggleHiddenNavbar()" />
 
                     <div class="header__search-container">
-                        <img src="images/searchIcon.svg" alt="search icon" />
+                        <!-- <img src="images/searchIcon.svg" alt="search icon" />     -->
+                        <form>
+                            <label class="flex items-center">
+                                <span class="flex items-center pr-1">
+                                    <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 30 30">
+                                        <path fill="currentColor"
+                                            d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <input class="w-full bg-transparent text-white py-0 pl-0 pr-0 focus:outline-none"
+                                    type="text" />
+                            </label>
+                        </form>
+
                     </div>
                 </div>
 
-                <h1 class="header__title">News Page</h1>
+                <h1 class="header__title text-center block md:flex md:justify-center">
+                    <p class="block md:inline md:pr-4">News </p>
+                    <p class="block md:inline pb-3 -mt-1 md:mt-0"> Page</p>
+                </h1>
 
                 <div>
                     <img src="images/accountIcon.svg" alt="account icon" class="header__account-image md:hidden ">
 
-                    <div class=" header__button-container hidden md:flex">
+                    <div class=" header__register-and-signin-button-container hidden md:flex">
                         <button>Register</button>
                         <button>Sign in</button>
                     </div>
                 </div>
-
             </div>
 
-            <ul class="header__dropdown">
-                <li onclick="hideNavbar()">Home</li>
-                <li onclick="hideNavbar()">News</li>
-                <li onclick="hideNavbar()">Sport</li>
-                <li onclick="hideNavbar()">Business</li>
-                <li onclick="hideNavbar()">Innovation</li>
-                <li onclick="hideNavbar()">Culture</li>
-                <li onclick="hideNavbar()">Arts</li>
-                <li onclick="hideNavbar()">Travel</li>
-                <li onclick="hideNavbar()">Earth</li>
+            <ul class="header__nav-dropdown">
+                <li onclick="toggleHiddenNavbar()">Home</li>
+                <li onclick="toggleHiddenNavbar()">News</li>
+                <li onclick="toggleHiddenNavbar()">Sport</li>
+                <li onclick="toggleHiddenNavbar()">Business</li>
+                <li onclick="toggleHiddenNavbar()">Innovation</li>
+                <li onclick="toggleHiddenNavbar()">Culture</li>
+                <li onclick="toggleHiddenNavbar()">Arts</li>
+                <li onclick="toggleHiddenNavbar()">Travel</li>
+                <li onclick="toggleHiddenNavbar()">Earth</li>
             </ul>
-
         </nav>
-
     </header>
 
-    <main class="main flex flex-wrap">
+    <main class="main flex flex-wrap pt-20 md:pt-30 lg:pt-40">
 
-        <article class="main__article w-full md:w-1/3 lg:w-1/4 xl:w-1/4 flex flex-row md:flex-col border-b border-gray-300 md:border-b-0 lg:border-b">
+        <article
+            class="main__article w-full md:w-1/3 lg:w-1/4 xl:w-1/4 flex flex-row md:flex-col border-b border-gray-300 md:border-b-0 lg:border-b">
             <img class="main__article-image w-1/2 md:w-full h-full md:h-1/2 lg:w-full lg:h-1/2 xl:w-full"
                 src="images/new1.png" alt="article image">
             <div class="main__article-text-container w-1/2 md:w-full h-full md:h-1/2 lg:w-full lg:h-1/2 xl:w-full">
                 <h2 class="main__article-title">The Lebanon ceasefire is a respite, not a solution for the Middle East
                 </h2>
-                <p class="main__article-text main__article-text-mobile-short">For most of the people of Lebanon, a ceasefire could not come quickly
+                <p class="main__article-text main__article-text-mobile-short">For most of the people of Lebanon, a
+                    ceasefire could not come quickly
                     enough. A leading Lebanese analyst at a conference on the Middle East that I’m attending in Rome
                     said she couldn’t sleep as the appointed hour for the ceasefire came closer.
 
@@ -122,18 +139,20 @@
                     <p>2 mins ago</p> |
                     <p>News</p>
                 </section>
-               
+
             </div>
         </article>
 
-        <article class="main__article w-full md:w-2/3 lg:w-2/4 xl:w-2/4 flex flex-row md:flex-col border-b border-gray-300 border-b md:border-0">
+        <article
+            class="main__article w-full md:w-2/3 lg:w-2/4 xl:w-2/4 flex flex-row md:flex-col border-b border-gray-300 border-b md:border-0">
             <img class="main__article-image w-1/2 md:w-full h-full md:h-2/3" src="images/news4.jpg" alt="article image">
             <div class="main__article-text-container w-1/2 md:w-full h-full md:h-1/3">
                 <div class="main__live-text-with-article-text">
                     <p class="main__live-text">LIVE</p>
                     <h2 class="main__article-title">First new asthma attack treatment in 50 years</h2>
                 </div>
-                <p class="main__article-text clamp-2">Researchers say they have found the first new treatment for asthma attacks
+                <p class="main__article-text clamp-2">Researchers say they have found the first new treatment for asthma
+                    attacks
                     in 50 years.
 
                     The injection dampens part of the immune system that can go into overdrive in flare-ups of both
@@ -186,16 +205,18 @@
                     but "only because I've been told to".
 
                     "Unfortunately, no drug gets rid of asthma completely, but this is the nearest thing. It's a bit of
-                    a miracle actually," she adds.</p>      
+                    a miracle actually," she adds.</p>
             </div>
         </article>
-      
+
         <section class="main__older-articles flex flex-1 min-w-1/2 flex-wrap">
-            <article class="main__article  sm:flex sm:flex-row flex   w-full sm:w-1/2 md:w-1/2 lg:w-full xl:w-full border-b border-gray-300 md:border-b-0 lg:border-b md:pr-4">
+            <article
+                class="main__article  sm:flex sm:flex-row flex   w-full sm:w-1/2 md:w-1/2 lg:w-full xl:w-full border-b border-gray-300 md:border-b-0 lg:border-b md:pr-4">
                 <img class="main__article-image w-1/2 h-full  md:hidden" src="images/news5.jpg" alt="article image">
                 <div class="main__article-text-container w-1/2 md:w-full h-full md:h-1/2 lg:w-full lg:h-1/2 xl:w-full">
                     <h2 class="main__article-title">Ireland pick Prendergast over Crowley for Australia</h2>
-                    <p class="main__article-text main__article-text-tablet-long"> Autumn Nations Series: Ireland v Australia
+                    <p class="main__article-text main__article-text-tablet-long"> Autumn Nations Series: Ireland v
+                        Australia
 
                         Venue: Aviva Stadium, Dublin Date: Saturday, 30 November Kick-off: 15:10 GMT
 
@@ -228,15 +249,17 @@
                     <section class="main__time-and-topic-container hidden md:flex">
                         <p>4 mins ago</p> |
                         <p>Sport</p>
-                    </section>                   
+                    </section>
                 </div>
-            </article>         
+            </article>
 
-            <article class="main__article  sm:flex sm:flex-row flex   w-full sm:w-1/2 md:w-1/2 lg:w-full xl:w-full border-b border-gray-300 md:border-b-0 lg:border-b md:pr-4">
-                <img class="main__article-image w-1/2 h-full  md:hidden" src="images/news6.jpg"  alt="article image">
+            <article
+                class="main__article  sm:flex sm:flex-row flex   w-full sm:w-1/2 md:w-1/2 lg:w-full xl:w-full border-b border-gray-300 md:border-b-0 lg:border-b md:pr-4">
+                <img class="main__article-image w-1/2 h-full  md:hidden" src="images/news6.jpg" alt="article image">
                 <div class="main__article-text-container w-1/2 md:w-full h-full md:h-1/2 lg:w-full lg:h-1/2 xl:w-full">
                     <h2 class="main__article-title">Uniqlo does not use Xinjiang cotton, boss says</h2>
-                    <p class="main__article-text main__article-text-tablet-long">The boss of the company behind global fashion chain Uniqlo has told
+                    <p class="main__article-text main__article-text-tablet-long">The boss of the company behind global
+                        fashion chain Uniqlo has told
                         the BBC that the Japanese firm does not use cotton from the Xinjiang region of China in its
                         products.
 
@@ -300,15 +323,17 @@
                         <p>2 hrs ago</p> |
                         <p>Business</p>
                     </section>
-                  
+
                 </div>
             </article>
-          
-            <article class="main__article  sm:flex sm:flex-row flex   w-full sm:w-1/2 md:w-1/2 lg:w-full xl:w-full border-b border-gray-300 md:border-b-0 lg:border-b md:pr-4">
+
+            <article
+                class="main__article  sm:flex sm:flex-row flex   w-full sm:w-1/2 md:w-1/2 lg:w-full xl:w-full border-b border-gray-300 md:border-b-0 lg:border-b md:pr-4">
                 <img class="main__article-image w-1/2 h-full  md:hidden" src="images/news7.jpg" alt="article image">
-                    <div class="main__article-text-container w-1/2 md:w-full h-full md:h-1/2 lg:w-full lg:h-1/2 xl:w-full">
+                <div class="main__article-text-container w-1/2 md:w-full h-full md:h-1/2 lg:w-full lg:h-1/2 xl:w-full">
                     <h2 class="main__article-title">US regulator says AI scanner 'deceived' users after BBC story</h2>
-                    <p class="main__article-text main__article-text-tablet-long">US weapons scanning company Evolv Technology will be banned from
+                    <p class="main__article-text main__article-text-tablet-long">US weapons scanning company Evolv
+                        Technology will be banned from
                         making unsupported claims about its products in a proposed settlement with the US government.
 
                         The company had claimed its AI scanner, used in the entrances of thousands of US schools,
@@ -376,7 +401,7 @@
                         <p>5 hrs ago</p> |
                         <p>Innovation</p>
                     </section>
-                   
+
                 </div>
             </article>
         </section>
