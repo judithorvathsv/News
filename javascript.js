@@ -1,6 +1,22 @@
 function toggleHiddenNavbar(){
-    const menuList = document.querySelector('.header__nav-topic-dropdown');
-    menuList.classList.toggle("showned-list");   
+    const topicList = document.querySelector('.header__nav-topic-dropdown');
+    topicList.classList.toggle("showned-element");   
+}
+
+function toggleHiddenLogin(){
+    const loginForm = document.querySelector('.header__login');
+    loginForm.classList.toggle("showned-element");   
+
+    const registerForm = document.querySelector('.header__register');
+    registerForm.classList.remove("showned-element"); 
+}
+
+function toggleHiddenRegister(){
+    const registerForm = document.querySelector('.header__register');
+    registerForm.classList.toggle("showned-element");  
+    
+    const loginForm = document.querySelector('.header__login');
+    loginForm.classList.remove("showned-element"); 
 }
 
 function updateClampClassMobileShort() {
