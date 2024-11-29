@@ -179,7 +179,11 @@
 
  .main__time-and-topic-container{
   display: flex;
-    color:red;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 15px;
+  width: fit-content;
+   
  }
 
 
