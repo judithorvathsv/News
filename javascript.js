@@ -63,8 +63,7 @@ window.addEventListener('resize', updateClampClassTabletLong);
 function toggleFullscreen(article) {
     if (article.classList.contains('fullscreen')) {
         // Exit fullscreen
-        article.classList.remove('fullscreen');
-        const articleText = article.querySelector('.main__article-text');
+        article.classList.remove('fullscreen');       
         const image = article.querySelector('.main__article-image');
         image.style.display = ''; // Reset to default display
     } else {
