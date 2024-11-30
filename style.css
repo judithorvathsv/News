@@ -33,17 +33,17 @@
      color: #ffff;
  }
 
- .header__menu-button-and-search-container {
+ .header__menu-icon-and-search-form-container {
      display: flex;
      width: 100%;
      min-width: fit-content;
  }
 
- .header__menu-image {
+ .header__menu-icon {
      cursor: pointer;
  }
 
- .header__search-container {
+ .header__search-form {
      border: 1px solid #ffffff;
      border-radius: 5px;
      margin-left: 5px;
@@ -54,7 +54,7 @@
      width: 15%;
  }
 
- .header__search-container img {
+ .header__search-form img {
      width: 1.5rem;
  }
 
