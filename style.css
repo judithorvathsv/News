@@ -64,8 +64,7 @@
  }
 
  .header__title {
-     text-shadow: 2px 2px D3D3D3;
-     /* text-shadow: 2px 2px 3px #D3D3D3; */
+     text-shadow: 2px 2px D3D3D3;     
      color: #ffffff;
      font-size: 1.9rem;
      position: absolute;
@@ -77,6 +76,8 @@
      width: 2rem;
      filter: brightness(0) invert(1);
  }
+
+ /*--- NAVBAR Register and Login ---*/
 
  .header__register-and-signin-button-container {
      display: flex;
@@ -92,17 +93,33 @@
  }
 
  .header__cancel-icon {
-     width: 2rem;
-     filter: none;
+     width: 1.5rem;
+     filter: brightness(0) contrast(100%);
      display: flex;
      margin: 0 0 -5rem 27rem;
      cursor: pointer;
  }
 
+ .header__cancel-icon:hover {   
+    filter: brightness(0) contrast(50%); 
+}
+
  .header__register-title-cancel-button {
      display: flex;
      gap: 1rem
  }
+
+ .header__register-login-submit-button{
+    background-color: #003049;
+ }
+
+ .header__register-login-submit-button:hover{
+    background-color:  #004B5D;
+ }
+
+
+
+ /* --- NAVBAR topic part --- */
 
  .header__nav-topic-dropdown {
      display: none;
@@ -273,8 +290,4 @@
          font-size: 1.2rem;
          font-weight: bold;
      }
- }
-
- .login {
-     background-color: yellow;
  }

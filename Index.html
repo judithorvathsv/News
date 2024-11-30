@@ -22,7 +22,7 @@
 
                 <div class="header__menu-icon-and-search-form-container">
                     <img src="images/menuIcon.svg" onclick="toggleHiddenNavbar()" alt="menu icon"
-                        class="header__menu-icon" />
+                        class="header__menu-icon lg:hidden" />
 
                     <form class="header__search-form">
                         <div class="flex items-center">
@@ -47,7 +47,7 @@
 
                 <div>
                     <img src="images/accountIcon.svg" onclick="toggleHiddenLogin()" alt="account icon"
-                        class="header__account-image md:hidden ">
+                        class="header__account-image md:hidden">
 
                     <div class=" header__register-and-signin-button-container hidden md:flex">
                         <button onclick="toggleHiddenRegister()">Register</button>
@@ -76,7 +76,7 @@
                             alt="cancel login icon">
                         <img class="mx-auto h-10 w-auto" src="https://www.svgrepo.com/show/301692/login.svg"
                             alt="Workflow">
-                        <h2 class="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900">Sign in to your
+                        <h2 class="mt-6 text-center text-3xl leading-9 font-bold text-gray-900">Sign in to your
                             account</h2>
 
                         <div class="mt-2 text-center max-w">
@@ -137,7 +137,7 @@
                                 <div class="mt-6">
                                     <span class="block w-full rounded-md shadow-sm">
                                         <button type="submit"
-                                            class="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-700 hover:bg-blue-900 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out">
+                                            class="header__register-login-submit-button w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out">
                                             Sign in
                                         </button>
                                     </span>
@@ -156,7 +156,7 @@
                             alt="cancel registration icon">
                         <img class="mx-auto h-10 w-auto" src="https://www.svgrepo.com/show/301692/login.svg"
                             alt="Workflow">
-                        <h2 class="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900">Create a new
+                        <h2 class="mt-6 text-center text-3xl leading-9 font-bold text-gray-900">Create a new
                             account</h2>
 
                         <div class="mt-2 text-center max-w">
@@ -248,7 +248,7 @@
                                 <div class="mt-6">
                                     <span class="block w-full rounded-md shadow-sm">
                                         <button type="submit"
-                                            class="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-700 hover:bg-blue-900 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out">
+                                            class="header__register-login-submit-button w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out">
                                             Create account
                                         </button>
                                     </span>
